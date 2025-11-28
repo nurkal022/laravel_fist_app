@@ -1,66 +1,186 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📚 Журнал посещаемости для центра образования
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel](https://img.shields.io/badge/Laravel-11.46.2-red.svg)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![SQLite](https://img.shields.io/badge/Database-SQLite-green.svg)](https://sqlite.org)
 
-## About Laravel
+Веб-приложение для учета посещаемости студентов в образовательных центрах. Разработано на **Laravel 11** с использованием **SQLite** базы данных.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Возможности
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 👥 Управление студентами
+- ✅ Добавление новых студентов с контактными данными
+- ✅ Редактирование информации о студентах
+- ✅ Просмотр детальной информации
+- ✅ Мягкое удаление (деактивация)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 📊 Отметка посещаемости
+- ✅ Отметка посещаемости на текущий день
+- ✅ Выбор любой даты для отметки
+- ✅ 4 статуса посещаемости:
+  - **Присутствовал** (present)
+  - **Отсутствовал** (absent)
+  - **Опоздал** (late)
+  - **Освобожден** (excused)
 
-## Learning Laravel
+### 📈 Отчеты и аналитика
+- ✅ Отчеты по посещаемости за период
+- ✅ Процент посещаемости для каждого студента
+- ✅ Детальная история посещаемости
+- ✅ Цветовая индикация (зеленый/желтый/красный)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Технологии
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Laravel 11.46.2** - PHP фреймворк
+- **PHP 8.2+** - Серверный язык
+- **SQLite** - База данных
+- **Bootstrap 5** - CSS фреймворк
+- **Blade** - Шаблонизатор
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Быстрый старт
 
-## Laravel Sponsors
+### Локальная установка
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+# Клонирование репозитория
+git clone https://github.com/nurkal022/laravel_fist_app.git
+cd laravel_fist_app
 
-### Premium Partners
+# Установка зависимостей
+composer install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+# Настройка окружения
+cp .env.example .env
+php artisan key:generate
 
-## Contributing
+# Создание базы данных
+touch database/database.sqlite
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Запуск миграций
+php artisan migrate
 
-## Code of Conduct
+# Запуск сервера разработки
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Приложение будет доступно по адресу: `http://localhost:8000`
 
-## Security Vulnerabilities
+## 🌐 Развертывание на Plesk
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Проект оптимизирован для развертывания на **Plesk** с **PHP 8.3.28**:
 
-## License
+### Автоматическое развертывание через Git
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. **Добавьте репозиторий в Plesk Git:**
+   - URL: `https://github.com/nurkal022/laravel_fist_app.git`
+   - Branch: `main`
+
+2. **Настройте Additional Deployment Actions:**
+```bash
+composer install --optimize-autoloader --no-dev
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+chmod 664 database/database.sqlite
+php artisan migrate --force
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan storage:link
+chmod -R 755 storage/
+chmod -R 755 bootstrap/cache/
+```
+
+### Ручное развертывание
+
+```bash
+# Загрузите файлы на сервер
+# В корне сайта выполните:
+composer install --optimize-autoloader --no-dev
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate --force
+php artisan storage:link
+```
+
+## 📁 Структура базы данных
+
+### Таблица `students`
+```sql
+- id: INTEGER PRIMARY KEY
+- name: VARCHAR (имя студента)
+- phone: VARCHAR (телефон)
+- email: VARCHAR (email)
+- birth_date: DATE (дата рождения)
+- notes: TEXT (заметки)
+- active: BOOLEAN (активный/неактивный)
+- timestamps: created_at, updated_at
+```
+
+### Таблица `attendances`
+```sql
+- id: INTEGER PRIMARY KEY
+- student_id: INTEGER FOREIGN KEY
+- date: DATE (дата посещаемости)
+- status: ENUM ('present', 'absent', 'late', 'excused')
+- notes: TEXT (заметки)
+- timestamps: created_at, updated_at
+```
+
+## 🎨 Интерфейс
+
+- **Responsive дизайн** с Bootstrap 5
+- **Русскоязычный интерфейс**
+- **Intuitive навигация**
+- **Модальные окна** для подтверждений
+- **Цветовая индикация** статусов
+
+## 🔧 Настройка
+
+### Переменные окружения (.env)
+
+```env
+APP_NAME="Журнал посещаемости"
+APP_ENV=production
+APP_KEY=your_app_key_here
+APP_DEBUG=false
+APP_URL=https://your-domain.com
+
+DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/database/database.sqlite
+
+LOG_CHANNEL=stack
+CACHE_STORE=file
+SESSION_DRIVER=file
+```
+
+## 📊 Использование
+
+1. **Главная страница** → Список студентов
+2. **Добавить студента** → Форма создания
+3. **Отметить посещаемость** → Выбор даты и статусов
+4. **Отчеты** → Аналитика посещаемости
+
+## 🤝 Вклад в проект
+
+1. Fork проект
+2. Создайте feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit изменения (`git commit -m 'Add some AmazingFeature'`)
+4. Push в branch (`git push origin feature/AmazingFeature`)
+5. Откройте Pull Request
+
+## 📝 Лицензия
+
+Этот проект распространяется под лицензией MIT. Подробности в файле `LICENSE`.
+
+## 👨‍💻 Автор
+
+**nurkal022** - [GitHub](https://github.com/nurkal022)
+
+## 🙏 Благодарности
+
+- Laravel Framework
+- Bootstrap
+- SQLite
+- Весь Open Source community
