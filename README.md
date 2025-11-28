@@ -1,6 +1,6 @@
 # 📚 Журнал посещаемости для центра образования
 
-[![Laravel](https://img.shields.io/badge/Laravel-11.46.2-red.svg)](https://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-10.49.1-red.svg)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
 [![SQLite](https://img.shields.io/badge/Database-SQLite-green.svg)](https://sqlite.org)
 
